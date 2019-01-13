@@ -197,13 +197,13 @@ def queryholders(names,depth):
                 p = 2
                 #links3.append({"source": result, "target": name, "relation": "hold"})
                 if result not in names:  #决定节点是否可以处在不同层级
-                    nodes3.append({"name": result, "type": p,"credit_no":idss,"direction":"up","depth":dep-depth+1})
+                    nodes3.append({"name": result, "type": p,"credit_no":idss,"direction":"up","depth":int(dep)-depth+1})
 
                 a.append(result)
             elif len(result) >= 4:
                 p = 1
                 if result not in names:
-                    nodes3.append({"name": result, "type": p, "credit_no": idss, "direction": "up","depth":dep-depth+1})  #dep-depth+1
+                    nodes3.append({"name": result, "type": p, "credit_no": idss, "direction": "up","depth":int(dep)-depth+1})  #dep-depth+1
                 #links3.append({"source": result, "target": name, "relation": "hold"})
                 a.append(result)
             # for x in a:  #同一层边连接
@@ -269,14 +269,14 @@ def queryholders2(names,depth):
             if len(result2) < 4 and len(result2) > 1:
                 p2 = 2
                 if result2 not in names:
-                    nodes4.append({"name": result2, "type": p2, "credit_no": idss, "direction": "down","depth":dep-depth+1})
+                    nodes4.append({"name": result2, "type": p2, "credit_no": idss, "direction": "down","depth":int(dep)-depth+1})
                 #links4.append({"source": name, "target": result2, "relation": "hold"})
                 #nodes.append({"name": result2, "type": p2,"credit_no":idss})
                 a.append(result2)
             elif len(result2) >= 4:
                 p2 = 1
                 if result2 not in names:
-                    nodes4.append({"name": result2, "type": p2, "credit_no": idss, "direction": "down","depth":dep-depth+1})
+                    nodes4.append({"name": result2, "type": p2, "credit_no": idss, "direction": "down","depth":int(dep)-depth+1})
                 #links4.append({"source": name, "target": result2, "relation": "hold"})
                 #nodes.append({"name": result2, "type": p2,"credit_no":idss})
                 a.append(result2)
@@ -345,13 +345,13 @@ def queryholders5(names,depth):
                 p = 2
                 #links3.append({"source": result, "target": name, "relation": "hold"})
                 if result not in names:  #决定节点是否可以处在不同层级
-                    nodes5.append({"name": result, "type": p,"credit_no":idss,"direction":"up","depth":des-depth+1})
+                    nodes5.append({"name": result, "type": p,"credit_no":idss,"direction":"up","depth":int(des)-depth+1})
 
                 a.append(result)
             elif len(result) >= 4:
                 p = 1
                 if result not in names:
-                    nodes5.append({"name": result, "type": p, "credit_no": idss, "direction": "up","depth":des-depth+1})  #dep-depth+1
+                    nodes5.append({"name": result, "type": p, "credit_no": idss, "direction": "up","depth":int(des)-depth+1})  #dep-depth+1
                 #links3.append({"source": result, "target": name, "relation": "hold"})
                 a.append(result)
             # for x in a:  #同一层边连接
@@ -416,14 +416,14 @@ def queryholders6(names,depth):
             if len(result2) < 4 and len(result2) > 1:
                 p2 = 2
                 if result2 not in names:
-                    nodes6.append({"name": result2, "type": p2, "credit_no": idss, "direction": "down","depth":des-depth+1})
+                    nodes6.append({"name": result2, "type": p2, "credit_no": idss, "direction": "down","depth":int(des)-depth+1})
                 #links4.append({"source": name, "target": result2, "relation": "hold"})
                 #nodes.append({"name": result2, "type": p2,"credit_no":idss})
                 a.append(result2)
             elif len(result2) >= 4:
                 p2 = 1
                 if result2 not in names:
-                    nodes6.append({"name": result2, "type": p2, "credit_no": idss, "direction": "down","depth":des-depth+1})
+                    nodes6.append({"name": result2, "type": p2, "credit_no": idss, "direction": "down","depth":int(des)-depth+1})
                 #links4.append({"source": name, "target": result2, "relation": "hold"})
                 #nodes.append({"name": result2, "type": p2,"credit_no":idss})
                 a.append(result2)
